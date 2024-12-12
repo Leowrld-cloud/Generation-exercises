@@ -1,0 +1,221 @@
+#excersise 2 Intro to list 
+
+
+lists = ['salmon', 'beef', 'turkey', 'lamb']
+
+print(f'Number 1: {lists[0]}')
+print(f"Number 2: {lists [1]}")
+print(f"Number 3: {lists[2]}")
+print(f'Number 4: {lists[3]}')
+
+
+#Number 2.1
+
+
+artists = 'J cole', 'Young thug', 'Fred Again', 'baby keem'
+
+
+#Number 2.2
+
+
+print(f'I like {artists[0]} the most out of all of these four')
+
+print(f'I like {artists[1]} the most out of all of these four')
+
+print(f'I like {artists[2]} the most out of all of these four')
+
+print(f'I like {artists[3]} the most out of all of these four')
+
+for person in artists:
+    print(f'I like {person}! they are my favorite.')
+
+
+#Number 2.3
+
+
+favorite_book =  ['Rich Dad, Poor Dad', 'Think and Grow Rich', 'Atomic Habits']
+
+print(f'My Favorite Book is {favorite_book[0]}.')
+
+print(f'My Favorite Book is {favorite_book[1]}.')
+
+print(f'My Favorite Book is {favorite_book[2]}.')
+
+favorite_author = ['Robert Kiyosaki', 'Napoleon Hill', 'James Clear']
+
+print(f'\n''My Favorite Author is {favorite_author[0]}.')
+
+print(f'My Favorite Author is {favorite_author[1]}.')
+
+print(f'My Favorite Author is {favorite_author[2]}.')
+
+print(f'My favorite book is {favorite_book[0]}, and My Favorite Author is {favorite_author[0]}, It guides you to wealthy habits.')
+
+print(f'My favorite book is {favorite_book[1]}, and My Favorite Author is {favorite_author[1]}, It guides you to wealthy habits.')
+
+print(f'My favorite book is {favorite_book[2]}, and My Favorite Author is {favorite_author[2]}, It guides you to wealthy habits.')
+
+
+#2.4 The Dinner Problem
+
+
+#Step 1: Make a list that includes at least three people you’d like to invite to dinner.
+names = ['Prophet Muhammad PBUH', 'Hoyo', 'Aboo']
+
+#Step 2:  Print a message to each person, inviting them to dinner.
+print(f'I would Love to invite you to my final dinner {names[0]}!')
+
+print(f'I would Love to invite you to my final dinner {names[1]}!')
+
+print(f'I would Love to invite you to my final dinner {names[2]}!')
+
+#Step 3: One of your guests can’t make the dinner, so you need to send out a new set of invitations.
+print(f'\nunfortunately, {names[2]} can\'t make it to the dinner.')
+names[2] = 'Brother'
+
+#Step 4: Print a second set of invitation messages, now with the new guest.
+print(f'\nNew invitations:')
+for name in names:
+    print(f'I would love to invite you to my final dinner {name}!')
+
+#Step 5: We found a bigger table, So we can intite more people. 
+print(f'\nGood news! I found a bigger dinner tbale, so I can invite more people!')
+
+# Step 6: Add three more guests to the dinner list.
+names.insert(1, 'Alexander the Great')        # Adding at the beginning.
+names.insert(3, 'Muhammad Ali')      # Adding in the middle.
+names.append('Ghengis Khan')         # Adding at the end.
+
+# Step 7: Print a new set of invitation messages with the updated list.
+print(f'\nUpdated Invitations with More Guests:')
+for name in names:
+    print(f'I would love to invite you to my final dinner {name}!')
+
+# Step 8: I can now invite only two people due to space constraints.
+print(f'\nUnfortunately, my new dinner table won\'t arrive in time, and I can only invite two people.')
+
+# Step 9: Pop guests from the list until only two remain, while notifying them.
+#print('testing',len(names))
+while len(names) > 2:
+    removed_guest = names.pop()
+    print(f'Sorry {removed_guest}, I can\'t invite you to dinner.')
+
+# Step 10: Print a message to the two people still on the list.
+for name in names:
+    print(f'I would love to invite you to my final dinner {name}!')
+
+# Step 11: Remove the last two guests from the list using del to make the list empty.
+del names[:]
+
+# Step 12: Print the list to ensure it is empty.
+print(f'\nThe current guest list is: {names}')
+
+# Step 13: Use len() to print the number of people you are inviting.
+print(f'I am inviting {len(names)} people to dinner.')
+
+
+#2.5 Stretch and Challenge: 'Think of at least five places in the world you’d like to visit. Follow the steps to build your program'
+
+#Step 1: Store the locations in a list. Make sure the list is not in alphabetical order.
+places_to_visit = ['Tokyo, japan', 'Cairo, Egypt', 'Reykjavik, Iceland', 'Cape Town, South Africa', 'Machu Picchi, Peru']
+
+#Step 2: Print your list in its original order. Don’t worry about printing the list neatly, just print it as a raw Python list.
+print('These are the 5 places I would love to visit:')
+for place in places_to_visit:
+    print(f'\n-{place}')
+
+#Step 3: Use sorted() to print your list in alphabetical order without modifying the actual list.Show that your list is still in its original order by printing it.
+print(f'\n', sorted(places_to_visit))
+
+#Step 4: Use sorted() to print your list in reverse alphabetical order without changing the order of the original list.
+print(f'\n', sorted(places_to_visit,reverse=True))
+
+#Step 5: Show that your list is still in its original order by printing it again.
+print(f'\n', places_to_visit)
+
+#Step 6: Use reverse() to change the order of your list. Print the list to show that its order has changed.
+print(f'\n', sorted(places_to_visit,reverse=False))
+
+#Step 7: Use reverse() to change the order of your list again. Print the list to show it’s back to its original order.
+print(f'\n', sorted(places_to_visit,reverse=True))
+print(f'\n', places_to_visit)
+
+#Step 8: Use sort() to change your list so it’s stored in alphabetical order. Print the list to show that its order has been changed.
+print(f'\n', sorted(places_to_visit))
+
+#Step 9: Use sort() to change your list so it’s stored in reverse alphabetical order. Print the list to show that its order has changed.
+print(f'\n', sorted(places_to_visit,reverse=True))
+
+
+#2.6 Stretch and Challenge: Think of something you could store in a list. For example, mountains, rivers, countries, cities, languages, food, cars, anything you’d like.
+
+
+# Step 1: Store the fruits in a list. Make sure the list is not in alphabetical order.
+fruits = ['Apple', 'Banana', 'Cherry', 'Mango', 'Pineapple']
+
+# Step 2: Print your list in its original order. Don’t worry about printing the list neatly, just print it as a raw Python list.
+print("Original list of fruits:")
+for fruit in fruits:
+    print(f', {fruit}')
+
+# Step 3: Use sorted() to print your list in alphabetical order without modifying the actual list.
+print(f'\nList sorted alphabetically (but original list remains unchanged):')
+print(sorted(fruits))
+
+# Step 4: Use sorted() to print your list in reverse alphabetical order without changing the order of the original list.
+print(f'\nList sorted in reverse alphabetical order (but original list remains unchanged):')
+print(sorted(fruits, reverse=True))
+
+# Step 5: Show that your list is still in its original order by printing it again.
+print(f'\nThe original list remains unchanged:')
+print(fruits)
+
+# Step 6: Use reverse() to change the order of your list. Print the list to show that its order has changed.
+print(f'\nList after using reverse():')
+fruits.reverse()
+print(fruits)
+
+# Step 7: Use reverse() to change the order of your list again. Print the list to show it’s back to its original order.
+print(f'\nList after reversing it back to the original order:')
+fruits.reverse()
+print(fruits)
+
+# Step 8: Use sort() to change your list so it’s stored in alphabetical order. Print the list to show that its order has been changed.
+fruits.sort()
+print(f'\nList after using sort() to sort alphabetically:')
+print(fruits)
+
+# Step 9: Use sort() to change your list so it’s stored in reverse alphabetical order. Print the list to show that its order has changed.
+fruits.sort(reverse=True)
+print(f'\nList after using sort() to sort in reverse alphabetical order:')
+print(fruits)
+
+# Step 10: Use append() to add a new fruit to the end of the list.
+fruits.append('Grapes')
+print(f'\nList after using append() to add a new fruit (Grapes):')
+print(fruits)
+
+# Step 11: Use insert() to add a new fruit at a specific index (e.g., index 2).
+fruits.insert(2, 'Watermelon')
+print(f'\nList after using insert() to add Watermelon at index 2:')
+print(fruits)
+
+# Step 12: Use pop() to remove a fruit from the list and print which one was removed.
+removed_fruit = fruits.pop()
+print(f'\nThe fruit removed using pop() is: {removed_fruit}')
+print(f'List after pop():')
+print(fruits)
+
+# Step 13: Use del to remove the fruit at index 1 and print the list.
+del fruits[1]
+print(f'\nList after using del to remove the fruit at index 1:')
+print(fruits)
+
+# Step 14: Use len() to print the number of fruits currently in the list.
+print(f'\nThe number of fruits currently in the list: {len(fruits)}')
+
+# Step 15: Clear the list using clear() and print the empty list.
+fruits.clear()
+print(f'\nAfter clearing, the list is now empty: {fruits}')
+
+#Need help understanding pop and lens a bit more :(
